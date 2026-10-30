@@ -1,0 +1,122 @@
+:root {
+    color-scheme: light;
+    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    color: #182230;
+    background: #f5f7fb;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    background:
+        radial-gradient(ellipse at 12% 12%, rgb(99 102 241 / 12%), transparent 34rem),
+        radial-gradient(ellipse at 88% 88%, rgb(14 165 233 / 10%), transparent 30rem),
+        #f5f7fb;
+}
+
+.page-shell {
+    display: grid;
+    min-height: 100vh;
+    place-items: center;
+    padding: 2rem 1rem;
+}
+
+.auth-card {
+    width: min(100%, 27rem);
+    padding: 2.5rem;
+    border: 1px solid rgb(226 232 240 / 85%);
+    border-radius: 1.25rem;
+    background: rgb(255 255 255 / 95%);
+    box-shadow: 0 24px 70px rgb(15 23 42 / 10%), 0 2px 8px rgb(15 23 42 / 4%);
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: .7rem;
+    color: inherit;
+    text-decoration: none;
+}
+
+.brand__icon {
+    display: grid;
+    width: 2.6rem;
+    height: 2.6rem;
+    place-items: center;
+    border-radius: .85rem;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    box-shadow: 0 6px 14px rgb(79 70 229 / 24%);
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 800;
+}
+
+.brand__name { color: #263248; font-size: .95rem; font-weight: 750; letter-spacing: .01em; }
+.eyebrow { margin: 2rem 0 .45rem; color: #4f46e5; font-size: .75rem; font-weight: 750; letter-spacing: .12em; text-transform: uppercase; }
+.auth-card h1 { margin: 0; color: #111827; font-size: clamp(1.65rem, 5vw, 2rem); font-weight: 750; letter-spacing: -.04em; line-height: 1.2; }
+.auth-intro { margin: .7rem 0 1.7rem; color: #64748b; font-size: .95rem; line-height: 1.6; }
+.auth-intro strong { color: #334155; font-weight: 650; }
+.auth-form { display: grid; gap: 1.1rem; }
+.form-field { display: grid; gap: .45rem; }
+.form-field label { color: #334155; font-size: .87rem; font-weight: 650; }
+
+.form-field input {
+    width: 100%;
+    min-height: 3.1rem;
+    padding: .75rem .9rem;
+    border: 1px solid #cbd5e1;
+    border-radius: .7rem;
+    outline: none;
+    background: #fff;
+    color: #172033;
+    font: inherit;
+    transition: border-color .18s ease, box-shadow .18s ease, background .18s ease;
+}
+
+.form-field input::placeholder { color: #a0aaba; }
+.form-field input:hover { border-color: #a5b4fc; }
+.form-field input:focus { border-color: #6366f1; box-shadow: 0 0 0 4px rgb(99 102 241 / 13%); }
+.form-field small { color: #8390a2; font-size: .78rem; line-height: 1.45; }
+
+.button {
+    display: inline-flex;
+    min-height: 3.15rem;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    width: 100%;
+    margin-top: .3rem;
+    border: 0;
+    border-radius: .7rem;
+    cursor: pointer;
+    font: inherit;
+    font-size: .93rem;
+    font-weight: 700;
+    transition: transform .16s ease, box-shadow .16s ease, background .16s ease;
+}
+
+.button--primary { background: linear-gradient(100deg, #4f46e5, #5b4de2); color: #fff; box-shadow: 0 7px 16px rgb(79 70 229 / 20%); }
+.button--primary:hover { transform: translateY(-1px); background: linear-gradient(100deg, #4338ca, #4f46e5); box-shadow: 0 10px 20px rgb(79 70 229 / 25%); }
+.button--secondary { border: 1px solid #dbe2ec; background: #fff; color: #334155; }
+.button--secondary:hover { background: #f8fafc; }
+.button:focus-visible, a:focus-visible { outline: 3px solid rgb(99 102 241 / 40%); outline-offset: 3px; }
+
+.auth-footer { margin: 1.5rem 0 0; color: #64748b; font-size: .88rem; text-align: center; }
+.auth-footer a { color: #4f46e5; font-weight: 700; text-decoration: none; }
+.auth-footer a:hover { text-decoration: underline; }
+.notice { margin: 1.25rem 0; padding: .85rem 1rem; border: 1px solid transparent; border-radius: .75rem; font-size: .9rem; line-height: 1.5; }
+.notice p { margin: 0; }
+.notice--success { display: flex; align-items: flex-start; gap: .65rem; border-color: #bbf7d0; background: #f0fdf4; color: #166534; }
+.notice__icon { display: grid; flex: 0 0 1.35rem; height: 1.35rem; place-items: center; border-radius: 50%; background: #dcfce7; font-size: .8rem; font-weight: 800; }
+.notice--error { border-color: #fecaca; background: #fef2f2; color: #b91c1c; }
+.account-card .eyebrow { margin-top: 2rem; }
+
+@media (max-width: 480px) {
+    .auth-card { padding: 1.6rem; border-radius: 1rem; }
+}
